@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    background: #F0E5C9;
+}
+
+.section {
+    background: #9BA657;
+    height: calc(100vh - 60px);
+    margin: 30px;
+}

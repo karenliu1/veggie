@@ -1,0 +1,51 @@
+@keyframes car-drivein {
+    0% {
+        opacity: 0;
+        right: -200px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes car-bounce {
+    0%, 100% { bottom: 5px; }
+    50% { bottom: 0; }
+}
+
+@keyframes wheel {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.carContainer {
+    position: relative; /* to position wheels */
+    animation: car-drivein 1s ease-out,
+               car-bounce 0.3s linear infinite;
+    width: 450px;
+}
+
+.carBody {
+    position: relative;
+}
+
+/* wheels overlay the car body */
+.carWheel1,
+.carWheel2 {
+    position: absolute;
+    animation: wheel 1s infinite linear;
+}
+
+.carWheel1 {
+    left: 70px;
+    bottom: 30px;
+    height: 100px;
+}
+
+.carWheel2 {
+    left: 300px;
+    bottom: 30px;
+    height: 100px;
+}
