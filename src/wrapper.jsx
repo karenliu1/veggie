@@ -10,8 +10,11 @@ export default React.createClass({
         return (
             <div>
                 <LandSlide />
+                <hr />
                 <WasteSlide />
+                <hr />
                 <WaterSlide />
+                <hr />
                 <EmissionsSlide />
             </div>
         )
