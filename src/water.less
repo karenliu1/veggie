@@ -18,8 +18,8 @@
 }
 
 @keyframes rising {
-    0% { margin-bottom: 0; }
-    100% { margin-bottom: @waveRiseDistance; }
+    0% { bottom: 0; }
+    100% { bottom: @waveRiseDistance; }
 }
 
 @keyframes rising-background {
@@ -80,18 +80,18 @@
 
 .wave1 {
     background-image: url('../images/wave1.png');
-    bottom: @waveHeight;
+    margin-bottom: @waveHeight;
 }
 
 .wave2 {
     background-image: url('../images/wave2.png');
     left: -@waveExcess;
-    bottom: @waveHeight / 2;
+    margin-bottom: @waveHeight / 2;
 }
 
 .wave3 {
     background-image: url('../images/wave3.png');
-    bottom: 0;
+    margin-bottom: 0;
 }
 
 .iconContainer {
