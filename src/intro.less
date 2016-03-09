@@ -1,0 +1,30 @@
+.title {
+    font-family: 'Playfair Display', serif;
+    font-variant: small-caps;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.separator {
+    text-align: center;
+    position: relative;
+    height: 3rem;
+
+    &::before {
+        @separatorWidth: 20rem;
+
+        content: "";
+        background: white;
+        height: 1px;
+        width: @separatorWidth;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -@separatorWidth / 2;
+    }
+}
+
+.subtitle {
+    text-align: center;
+}
