@@ -1,11 +1,22 @@
 import React from 'react'
+import styles from './water.less'
 
 export default React.createClass({
     render() {
         return (
-            <div className="section">
-                It takes 2,400 gallons of water to produce 1 pound of beef, versus
-                244 gallons to produce 1 pound of tofu.
+            <div className={ `section wow ${styles.waterSection}` }>
+                <img className={ styles.wave1 }
+                     src="images/wave1.svg" />
+                <img className={ styles.wave2 }
+                     src="images/wave2.svg" />
+                <img className={ styles.wave3 }
+                     src="images/wave3.svg" />
+                <div className={ styles.waveBackground }></div>
+                <p className={ styles.textContainer }>
+                    It takes <strong>244</strong> gallons of water to produce a
+                    pound of tofu, but <strong>2,400</strong> gallons to produce 1
+                    pound of beef. So skimp on the beef, not on the showering!
+                </p>
             </div>
         )
     }

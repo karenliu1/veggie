@@ -1,0 +1,90 @@
+/* how far to overflow on each side for waving effect */
+@waveExcess: 5rem;
+
+/* how far from the bottom the first wave should start */
+@topWaveOffset: 10rem;
+
+/* how far to rise */
+@waveRiseDistance: 100vh - 60px;
+
+@keyframes waving {
+    0%, 100% { margin-left: 0; }
+    50% { margin-left: -@waveExcess; }
+}
+
+@keyframes waving-reverse {
+    0%, 100% { margin-left: 0; }
+    50% { margin-left: @waveExcess; }
+}
+
+@keyframes rising {
+    0% { margin-bottom: 0; }
+    100% { margin-bottom: @waveRiseDistance; }
+}
+
+@keyframes rising-background {
+    0% { height: 2px; } /* weird...needs a 2px correction */
+    100% { height: @waveRiseDistance + 2px; }
+}
+
+.waterSection {
+    overflow: hidden; /* hide wave overflow */
+    position: relative;
+}
+
+:global(.wow.animated) {
+    .waveBackground {
+        animation: rising-background 4s forwards;
+    }
+
+    .wave1, .wave3 {
+        animation: waving 1.5s infinite ease-in-out,
+                   rising 4s forwards;
+    }
+
+    .wave2 {
+        animation: waving-reverse 1.5s infinite ease-in-out,
+                   rising 4s forwards;
+    }
+}
+
+.waveBackground {
+    background: #2948CC; /* color of the last wave */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.textContainer {
+    position: absolute;
+    bottom: 0; /* wave background is least noisy at the bottom */
+    z-index: 2; /* show on top of waves */
+}
+
+.wave1, .wave2, .wave3 {
+    position: absolute;
+    z-index: 1; /* show beneath text */
+
+    /* NOTE: we can set both width and height here because preserveAspectRatio
+     * is off in the SVGs */
+    height: 10rem;
+    width: calc(~"100% +" @waveExcess * 2);
+}
+
+.wave1, .wave3 {
+    left: 0;
+}
+
+.wave1 {
+    bottom: @topWaveOffset;
+}
+
+.wave2 {
+    left: -@waveExcess;
+    bottom: @topWaveOffset / 2;
+}
+
+.wave3 {
+    bottom: 0;
+}

@@ -9,9 +9,9 @@ export default React.createClass({
     render() {
         return (
             <div>
-                <WaterSlide />
                 <LandSlide />
                 <WasteSlide />
+                <WaterSlide />
                 <EmissionsSlide />
             </div>
         )
