@@ -10,15 +10,11 @@ export default React.createClass({
     render() {
         return (
             <div>
-                <IntroSlide />
-                <hr />
-                <LandSlide />
-                <hr />
-                <WasteSlide />
-                <hr />
-                <WaterSlide />
-                <hr />
-                <EmissionsSlide />
+                <div className="section-wrapper"><IntroSlide /></div>
+                <div className="section-wrapper is-alternate"><LandSlide /></div>
+                <div className="section-wrapper"><WasteSlide /></div>
+                <div className="section-wrapper is-alternate"><WaterSlide /></div>
+                <div className="section-wrapper"><EmissionsSlide /></div>
             </div>
         )
     }

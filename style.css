@@ -1,23 +1,35 @@
 body {
     margin: 0;
-    background: #F0E5C9;
     overflow-x: hidden;
 }
 
-hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.section-wrapper {
+    padding: 2rem;
 }
 
 .section {
-    background: #9BA657;
     box-sizing: border-box;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
-    margin: 30px;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 4rem); /* 100% - 2 * section-wrapper margin */
     padding: 2rem;
+}
+
+/* Section colors! */
+
+.section-wrapper {
+    background: #F0E5C9;
+}
+
+.section {
+    background: #9BA657;
+}
+
+.section-wrapper.is-alternate {
+    background: #A68C69;
+}
+
+.section-wrapper.is-alternate .section {
+    background: #594433;
 }
