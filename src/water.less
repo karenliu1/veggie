@@ -1,11 +1,11 @@
+/* height of the wave PNG */
+@waveHeight: 94px;
+
 /* how far to overflow on each side for waving effect */
 @waveExcess: 5rem;
 
-/* how far from the bottom the first wave should start */
-@topWaveOffset: 10rem;
-
 /* how far to rise */
-@waveRiseDistance: 100vh - 60px;
+@waveRiseDistance: 60vh;
 
 @keyframes waving {
     0%, 100% { margin-left: 0; }
@@ -23,13 +23,18 @@
 }
 
 @keyframes rising-background {
-    0% { height: 2px; } /* weird...needs a 2px correction */
-    100% { height: @waveRiseDistance + 2px; }
+    0% { height: 1px; } /* weird...needs a 1px correction */
+    100% { height: @waveRiseDistance + 1px; }
 }
 
 .waterSection {
     overflow: hidden; /* hide wave overflow */
     position: relative;
+
+    /* push text to bottom, background is less noisy there */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 :global(.wow.animated) {
@@ -57,8 +62,7 @@
 }
 
 .textContainer {
-    position: absolute;
-    bottom: 0; /* wave background is least noisy at the bottom */
+    margin: 0;
     z-index: 2; /* show on top of waves */
 }
 
@@ -66,9 +70,8 @@
     position: absolute;
     z-index: 1; /* show beneath text */
 
-    /* NOTE: we can set both width and height here because preserveAspectRatio
-     * is off in the SVGs */
-    height: 10rem;
+    height: @waveHeight;
+    background-repeat: repeat-x;
     width: calc(~"100% +" @waveExcess * 2);
 }
 
@@ -77,14 +80,17 @@
 }
 
 .wave1 {
-    bottom: @topWaveOffset;
+    background-image: url('../images/wave1.png');
+    bottom: @waveHeight;
 }
 
 .wave2 {
+    background-image: url('../images/wave2.png');
     left: -@waveExcess;
-    bottom: @topWaveOffset / 2;
+    bottom: @waveHeight / 2;
 }
 
 .wave3 {
+    background-image: url('../images/wave3.png');
     bottom: 0;
 }

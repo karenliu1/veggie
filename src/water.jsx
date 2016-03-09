@@ -5,12 +5,9 @@ export default React.createClass({
     render() {
         return (
             <div className={ `section wow ${styles.waterSection}` }>
-                <img className={ styles.wave1 }
-                     src="images/wave1.svg" />
-                <img className={ styles.wave2 }
-                     src="images/wave2.svg" />
-                <img className={ styles.wave3 }
-                     src="images/wave3.svg" />
+                <div className={ styles.wave1 }></div>
+                <div className={ styles.wave2 }></div>
+                <div className={ styles.wave3 }></div>
                 <div className={ styles.waveBackground }></div>
                 <p className={ styles.textContainer }>
                     It takes <strong>244</strong> gallons of water to produce a
