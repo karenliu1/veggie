@@ -5,6 +5,11 @@ body {
 
 .section {
     background: #9BA657;
-    height: calc(100vh - 60px);
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
     margin: 30px;
+    min-height: calc(100vh - 60px);
+    padding: 2rem;
 }
