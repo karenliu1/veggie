@@ -20,11 +20,13 @@
     100% { transform: rotate(0deg); }
 }
 
-.carContainer {
-    position: relative; /* to position wheels */
-    animation: car-drivein 1s ease-out,
-               car-bounce 0.3s linear infinite;
-    width: 450px;
+:global(.wow.animated) {
+    .carContainer {
+        position: relative; /* to position wheels */
+        animation: car-drivein 1s ease-out,
+                   car-bounce 0.3s linear infinite;
+        width: 450px;
+    }
 }
 
 .carBody {

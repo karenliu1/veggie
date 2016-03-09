@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './emissions.css'
+import styles from './emissions.less'
 
 export default React.createClass({
     render() {
