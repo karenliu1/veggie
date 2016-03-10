@@ -27,6 +27,11 @@
     100% { height: @waveRiseDistance + 1px; }
 }
 
+@keyframes cow-wave {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
 .waterSection {
     overflow: hidden; /* hide wave overflow */
     position: relative;
@@ -51,6 +56,15 @@
         animation: waving-reverse 1.5s infinite ease-in-out,
                    rising 4s forwards;
     }
+}
+
+.cow {
+    animation: rising 4s forwards, cow-wave 1.5s infinite ease-in-out;
+    right: 1rem;
+    max-width: 20vw;
+    margin-bottom: -@waveRiseDistance / 2;
+    position: absolute;
+    z-index: -1; // don't cover the text
 }
 
 .waveBackground {
@@ -92,12 +106,4 @@
 .wave3 {
     background-image: url('../images/wave3.png');
     margin-bottom: 0;
-}
-
-.iconContainer {
-    text-align: center;
-}
-
-.icon {
-    max-width: 20vw;
 }
