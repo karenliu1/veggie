@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './emissions.less'
+import wrapperStyles from './wrapper.less'
 
 export default React.createClass({
     render() {
         return (
-            <div className="section wow">
+            <div className={ `${wrapperStyles.section} wow` }>
                 The greenhouse gasses produced by animal farming are more than the emissions from all cars, trucks, planes and ships *combined*
                 <div className={ styles.carContainer }>
                     <img className={ styles.carBody } src="images/car.svg" />

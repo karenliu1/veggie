@@ -2,34 +2,3 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
-
-.section-wrapper {
-    padding: 2rem;
-}
-
-.section {
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    min-height: calc(100vh - 4rem); /* 100% - 2 * section-wrapper margin */
-    padding: 2rem;
-}
-
-/* Section colors! */
-
-.section-wrapper {
-    background: #F0E5C9;
-}
-
-.section {
-    background: #9BA657;
-}
-
-.section-wrapper.is-alternate {
-    background: #A68C69;
-}
-
-.section-wrapper.is-alternate .section {
-    background: #594433;
-}

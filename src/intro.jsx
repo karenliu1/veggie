@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './intro.less'
+import wrapperStyles from './wrapper.less'
 
 export default React.createClass({
     render() {
         return (
-            <div className="section">
+            <div className={ wrapperStyles.section }>
                 <p className={ styles.title }>
                     The Environmental Impact of Meat Production
                 </p>

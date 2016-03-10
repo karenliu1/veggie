@@ -14,7 +14,7 @@ module.exports = {
             test: /\.less$/,
             loader: "style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!less"
         }, {
-            test: /\.(png|jpg)$/,
+            test: /\.(png|jpg|svg)$/,
             loader: "url?limit=25000"
         }]
     },
