@@ -1,0 +1,56 @@
+@import './lesshat.less';
+
+@bigFishZindex: 2;
+@littleFishZindex: 1;
+
+@bigFishHeight: 6rem;
+@bigFishWidth: 9rem; // based on rough SVG dimensions
+@littleFishHeight: 3rem;
+@fishSpacing: 5rem;
+
+@fishTankBg: #3498db;
+
+.keyframes(~'little-swim, from { right: 0 } to { right: 100% }');
+.keyframes(~'big-swim, from { left: 100% } to { left: -@{bigFishWidth} }');
+
+.fishTank {
+    background: @fishTankBg;
+    border: 1rem solid #2980b9;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow: hidden;
+    position: relative;
+    height: @bigFishHeight + 2rem;
+    width: 100%;
+    .box-sizing(border-box);
+}
+
+:global(.wow.animated) {
+    .bigFish {
+        .animation(big-swim 3s both ease-in 1s);
+    }
+    .littleFish {
+        .animation(little-swim 6s forwards linear);
+    }
+}
+
+.bigFish, .littleFish {
+    position: absolute;
+    right: 0;
+}
+
+.bigFish {
+    background: @fishTankBg;
+    z-index: @bigFishZindex;
+
+    & > img {
+        height: @bigFishHeight;
+    }
+}
+
+.littleFish {
+    height: @littleFishHeight;
+    top: (@bigFishHeight - @littleFishHeight) / 2;
+    white-space: nowrap;
+    z-index: @littleFishZindex;
+}
