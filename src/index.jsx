@@ -6,4 +6,4 @@ import Wrapper from './wrapper.jsx'
 ReactDOM.render(
     <Wrapper />,
     document.getElementById('veggieTarget')
-);
+)

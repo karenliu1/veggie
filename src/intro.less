@@ -1,32 +1,39 @@
-.title {
-    font-family: 'Playfair Display', serif;
-    font-variant: small-caps;
-    font-size: 4rem;
-    margin: auto;
-    text-align: center;
-    max-width: 40rem;
-}
+@import './lesshat.less';
 
-.separator {
-    text-align: center;
+.section {
+    .display(flex);
+    .flex-direction(column);
+
+    // For displaying the monkey
+    overflow: hidden;
     position: relative;
-    height: 3rem;
-
-    &::before {
-        @separatorWidth: 20rem;
-
-        content: "";
-        background: white;
-        height: 1px;
-        width: @separatorWidth;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -@separatorWidth / 2;
-    }
 }
 
-.subtitle {
-    text-align: center;
+.intro {
+    .flex(1);
+}
+
+@monkeySize: 8rem;
+
+.monkey {
+    .rotate(270deg);
+    position: absolute;
+    right: -@monkeySize;
+    top: 50%;
+    transition: right 1s ease-out;
+
+    width: @monkeySize;
+}
+
+.keyframes(~'monkey-gasp, 0%, 100% { right: -@{monkeySize}; } 50% { right: 0; }');
+.monkeyIsActive {
+    .animation(monkey-gasp 2s);
+}
+
+.bear {
+    max-width: 15rem;
+}
+
+.text {
+    text-align: left;
 }
