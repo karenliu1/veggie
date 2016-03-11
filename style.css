@@ -2,3 +2,12 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+
+a {
+    color: #DDE2A4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #668063;
+}
