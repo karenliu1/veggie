@@ -1,65 +1,41 @@
-/* height of the wave PNG */
-@waveHeight: 94px;
+@import './lesshat.less';
 
-/* how far to overflow on each side for waving effect */
-@waveExcess: 5rem;
+@waveHeight: 94px; // height of the wave PNG
+@waveExcess: 5rem; // how far to overflow on each side for waving effect
+@waveRiseDistance: 60vh; // how far to rise
 
-/* how far to rise */
-@waveRiseDistance: 60vh;
-
-@keyframes waving {
-    0%, 100% { margin-left: 0; }
-    50% { margin-left: -@waveExcess; }
-}
-
-@keyframes waving-reverse {
-    0%, 100% { margin-left: 0; }
-    50% { margin-left: @waveExcess; }
-}
-
-@keyframes rising {
-    0% { bottom: 0; }
-    100% { bottom: @waveRiseDistance; }
-}
-
-@keyframes rising-background {
-    0% { height: 1px; } /* weird...needs a 1px correction */
-    100% { height: @waveRiseDistance + 1px; }
-}
-
-@keyframes cow-wave {
-    0%, 100% { transform: rotate(-3deg); }
-    50% { transform: rotate(3deg); }
-}
+.keyframes(~'waving, 0%, 100% { margin-left: 0; } 50% { margin-left: -@{waveExcess}; }');
+.keyframes(~'waving-reverse, 0%, 100% { margin-left: 0; } 50% { margin-left: @{waveExcess}; }');
+.keyframes(~'rising, from { bottom: 0; } to { bottom: @{waveRiseDistance}; }');
+.keyframes(~'rising-background, from { height: 0; } to { height: @{waveRiseDistance}; }');
+.keyframes(~'cow-wave, 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); }');
 
 .waterSection {
     overflow: hidden; /* hide wave overflow */
     position: relative;
 
     /* push text to bottom, background is less noisy there */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    .display(flex);
+    .flex-direction(column);
+    .justify-content(flex-end);
 }
 
 :global(.wow.animated) {
     .waveBackground {
-        animation: rising-background 4s forwards;
+        .animation(rising-background 4s forwards);
     }
 
     .wave1, .wave3 {
-        animation: waving 1.5s infinite ease-in-out,
-                   rising 4s forwards;
+        .animation(waving 1.5s infinite ease-in-out, rising 4s forwards);
     }
 
     .wave2 {
-        animation: waving-reverse 1.5s infinite ease-in-out,
-                   rising 4s forwards;
+        .animation(waving-reverse 1.5s infinite ease-in-out, rising 4s forwards);
     }
 }
 
 .cow {
-    animation: rising 4s forwards, cow-wave 1.5s infinite ease-in-out;
+    .animation(rising 4s forwards, cow-wave 1.5s infinite ease-in-out);
     right: 1rem;
     max-width: 20vw;
     margin-bottom: -@waveRiseDistance / 2;
@@ -68,11 +44,12 @@
 }
 
 .waveBackground {
-    background: #2948CC; /* color of the last wave */
+    background: #2948CC; // color of the last wave
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    padding-top: 1px; // weird...needs a 1px correction
 }
 
 .textContainer {

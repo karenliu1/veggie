@@ -1,3 +1,5 @@
+@import './lesshat.less';
+
 // Color palettes from:
 // http://www.colourlovers.com/palette/1297885/secret_forest
 @bgColor1: #F0E5C9;
@@ -22,37 +24,37 @@
     // Separator from:
     // http://tympanus.net/Development/SectionSeparators/
     &::after {
+        background: inherit;
         content: "";
         pointer-events: none;
+        .box-shadow(-@separatorSize @separatorSize 0 @bgColor1,
+                    @separatorSize -@separatorSize 0 @bgColor1);
+        .transform(translateX(-50%) rotate(45deg));
 
         position: absolute;
         left: 50%;
         top: -@separatorSize / 2;
         width: @separatorSize;
         height: @separatorSize;
-        transform: translateX(-50%) rotate(45deg);
-        background: inherit;
-        box-shadow: -@separatorSize @separatorSize 0 @bgColor1,
-                    @separatorSize -@separatorSize 0 @bgColor1;
     }
 }
 
 .section {
     background: @fgColor1;
-    box-sizing: border-box;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
     min-height: calc(~"100vh -" (2 * @wrapperPadding));
     padding: 2rem;
+    .box-sizing(border-box);
 }
 
 .sectionWrapper.alternate {
     background: @bgColor2;
 
     &::after {
-        box-shadow: -@separatorSize @separatorSize 0 @bgColor2,
-                    @separatorSize -@separatorSize 0 @bgColor2;
+        .box-shadow(-@separatorSize @separatorSize 0 @bgColor2,
+                    @separatorSize -@separatorSize 0 @bgColor2);
     }
 }
 

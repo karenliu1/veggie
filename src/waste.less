@@ -1,31 +1,26 @@
+@import './lesshat.less';
+
 @barHeight: 5rem;
 
-@keyframes animal-grow {
-    0% { width: 0%; }
-    100% { width: 100%; }
-}
-
-@keyframes people-grow {
-    0% { width: 0%; }
-    100% { width: 3%; }
-}
+.keyframes(~'animal-grow, 0% { width: 0%; } 100% { width: 100%; }');
+.keyframes(~'people-grow, 0% { width: 0%; } 100% { width: 3%; }');
 
 .animalPoopBar, .peoplePoopBar {
     background-color: #A68C69;
     border: 0.5rem solid #594433;
     border-radius: 1rem;
     background-image: url('../images/poop.svg');
-    background-size: auto @barHeight;
+    .background-size(auto @barHeight);
     min-height: 1rem;
 }
 
 :global(.wow.animated) {
     .animalPoopBar {
-        animation: animal-grow 4s forwards ease-out;
+        .animation(animal-grow 4s forwards ease-out);
     }
 
     .peoplePoopBar {
-        animation: people-grow 4s forwards ease-out;
+        .animation(people-grow 4s forwards ease-out);
     }
 }
 
@@ -39,17 +34,17 @@
 }
 
 .chartRow {
-    align-items: center;
-    display: flex;
+    .display(flex);
+    .align-items(center);
     margin-top: 2rem;
 }
 
 .sourceIcon {
-    flex: none;
+    .flex(none);
     margin-right: 1rem;
     width: @barHeight;
 }
 
 .poopBars {
-    flex: auto;
+    .flex(auto);
 }
