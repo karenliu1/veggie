@@ -4,6 +4,10 @@
 @waveExcess: 5rem; // how far to overflow on each side for waving effect
 @waveRiseDistance: 60vh; // how far to rise
 
+@waveZindex: 1;
+@cowZindex: 2;
+@textZindex: 3;
+
 .keyframes(~'waving, 0%, 100% { margin-left: 0; } 50% { margin-left: -@{waveExcess}; }');
 .keyframes(~'waving-reverse, 0%, 100% { margin-left: 0; } 50% { margin-left: @{waveExcess}; }');
 .keyframes(~'rising, from { bottom: 0; } to { bottom: @{waveRiseDistance}; }');
@@ -46,7 +50,7 @@
     max-width: 20vw;
     margin-bottom: -@waveRiseDistance / 2;
     position: absolute;
-    z-index: -1; // don't cover the text
+    z-index: @cowZindex;
 }
 
 // Dark blue fill from bottom of slide to start of last wave
@@ -60,12 +64,12 @@
 }
 
 .textContainer {
-    z-index: 2; /* show on top of waves */
+    z-index: @textZindex;
 }
 
 .wave1, .wave2, .wave3 {
     position: absolute;
-    z-index: 1; /* show beneath text */
+    z-index: @waveZindex;
 
     height: @waveHeight;
     background-repeat: repeat-x;
