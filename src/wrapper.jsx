@@ -1,7 +1,7 @@
 import React from 'react'
 
 import IntroSlide from './intro.jsx'
-import EmissionsSlide from './emissions.jsx'
+import EmissionsSlide from './emissions/index.jsx'
 import LandSlide from './land.jsx'
 import WasteSlide from './waste.jsx'
 import WaterSlide from './water.jsx'

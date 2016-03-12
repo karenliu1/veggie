@@ -1,9 +1,9 @@
 import React from 'react'
 import classnames from 'classnames'
-import styles from './emissions.less'
-import wrapperStyles from './wrapper.less'
-import carSvg from './emissions_car_svg.jsx'
-import boatSvg from './emissions_boat_svg.jsx'
+import styles from './styles.less'
+import wrapperStyles from '../wrapper.less'
+import carSvg from './car_svg.jsx'
+import boatSvg from './boat_svg.jsx'
 
 export default React.createClass({
     getInitialState() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './emissions.less'
+import styles from './styles.less'
 
 export default (
     <svg className={ styles.carIcon } viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
