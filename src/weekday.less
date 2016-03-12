@@ -1,0 +1,25 @@
+@import './lesshat.less';
+
+.burgerIcon, .faceIconContainer {
+    max-width: 15rem;
+    width: 100%;
+}
+
+.faceIconContainer {
+    float: right;
+}
+
+.keyframes(~'fade-in, from { opacity: 0; } to { opacity: 1; }');
+.relievedIcon {
+    .animation(fade-in 1s both);
+}
+
+.keyframes(~'tear-shine, 0%, 100% { transform: translate(0.5px); } 50% { transform: translate(-0.5px); }');
+.tearShine {
+    .animation(tear-shine 0.2s infinite);
+}
+
+.keyframes(~'tear-drop, 0%, 100% { transform: translateY(2px); } 50% { transform: translateY(0); }');
+.tearDrop {
+    .animation(tear-drop 2s infinite);
+}

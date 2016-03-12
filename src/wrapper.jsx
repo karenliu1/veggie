@@ -5,6 +5,7 @@ import EmissionsSlide from './emissions.jsx'
 import LandSlide from './land.jsx'
 import WasteSlide from './waste.jsx'
 import WaterSlide from './water.jsx'
+import WeekdaySlide from './weekday.jsx'
 import styles from './wrapper.less'
 
 export default React.createClass({
@@ -25,6 +26,9 @@ export default React.createClass({
                 </div>
                 <div className={ styles.sectionWrapper }>
                     <EmissionsSlide />
+                </div>
+                <div className={ `${styles.sectionWrapper} ${styles.alternate}` }>
+                    <WeekdaySlide />
                 </div>
             </div>
         )
