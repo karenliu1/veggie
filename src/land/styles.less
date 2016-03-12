@@ -1,56 +1,41 @@
 @import '../lesshat.less';
 
-@bigFishZindex: 2;
-@littleFishZindex: 1;
+@iconSize: 7rem;
 
-@bigFishHeight: 6rem;
-@bigFishWidth: 9rem; // based on rough SVG dimensions
-@littleFishHeight: 3rem;
-@fishSpacing: 5rem;
-
-@fishTankBg: #3498db;
-
-.keyframes(~'little-swim, from { right: 0 } to { right: 100% }');
-.keyframes(~'big-swim, from { left: 100% } to { left: -@{bigFishWidth} }');
-
-.fishTank {
-    background: @fishTankBg;
-    border: 1rem solid #2980b9;
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-    overflow: hidden;
+.iconContainer {
     position: relative;
-    height: @bigFishHeight + 2rem;
-    width: 100%;
-    .box-sizing(border-box);
-}
+    height: @iconSize * 3 + 2rem;
 
-:global(.wow.animated) {
-    .bigFish {
-        .animation(big-swim 3s both ease-in 1s);
+    .centerIcon, .surroundIcon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -@iconSize / 2;
+        margin-left: -@iconSize / 2;
+        width: @iconSize;
     }
-    .littleFish {
-        .animation(little-swim 6s forwards linear);
+
+    .centerIcon {
+        cursor: pointer;
+        z-index: 2;
+        .box-sizing(border-box);
+
+        &.showCaption:after {
+            content: "Click me!";
+            display: block;
+            font-size: 1rem;
+            text-align: center;
+        }
     }
-}
 
-.bigFish, .littleFish {
-    position: absolute;
-    right: 0;
-}
+    .surroundIcon {
+        .transition(transform 1s, opacity 1s);
+        opacity: 0;
+        z-index: 1;
 
-.bigFish {
-    background: @fishTankBg;
-    z-index: @bigFishZindex;
-
-    & > img {
-        height: @bigFishHeight;
+        &.isActive {
+            opacity: 1;
+            z-index: 3;
+        }
     }
-}
-
-.littleFish {
-    height: @littleFishHeight;
-    top: (@bigFishHeight - @littleFishHeight) / 2;
-    white-space: nowrap;
-    z-index: @littleFishZindex;
 }
