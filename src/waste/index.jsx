@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './waste.less'
-import wrapperStyles from './wrapper.less'
+import styles from './styles.less'
+import wrapperStyles from '../wrapper.less'
 
 export default React.createClass({
     render() {

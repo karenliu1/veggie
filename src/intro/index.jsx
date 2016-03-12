@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
-import styles from './intro.less'
-import wrapperStyles from './wrapper.less'
+import styles from './styles.less'
+import wrapperStyles from '../wrapper.less'
 
 export default React.createClass({
     hideMonkeyTimeout: null, // after 3s, remove the monkeyIsActive class

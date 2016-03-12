@@ -1,11 +1,11 @@
 import React from 'react'
 
-import IntroSlide from './intro.jsx'
+import IntroSlide from './intro/index.jsx'
 import EmissionsSlide from './emissions/index.jsx'
-import LandSlide from './land.jsx'
-import WasteSlide from './waste.jsx'
-import WaterSlide from './water.jsx'
-import WeekdaySlide from './weekday.jsx'
+import LandSlide from './land/index.jsx'
+import WasteSlide from './waste/index.jsx'
+import WaterSlide from './water/index.jsx'
+import WeekdaySlide from './weekday/index.jsx'
 import styles from './wrapper.less'
 
 export default React.createClass({
