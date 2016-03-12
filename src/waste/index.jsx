@@ -3,28 +3,19 @@ import classnames from 'classnames'
 import styles from './styles.less'
 import wrapperStyles from '../wrapper.less'
 import poopSvg from './poop_svg.jsx'
-import poopShockedSvg from './poop_shocked_svg.jsx'
 
 export default React.createClass({
     render() {
         return (
-            <div className={ wrapperStyles.section }>
-                Animals raised for food produce ~130 times the amount of
-                excrement as the entire human population. Runoff pollutes
-                waterways and creates dead zones.
-
-                <div className={ classnames(styles.images, "row center-xs bottom-xs") }>
-                    <div className="col-xs-2">
-                        <img src="images/pig.svg" />
+            <div className={ classnames(wrapperStyles.section, styles.section) }>
+                <div className={ classnames(styles.content, "row middle-xs") }>
+                    <div className="col-xs-12 col-md-9">
+                        Animals raised for food produce ~130 times the amount of
+                        excrement as the entire human population. Runoff pollutes
+                        waterways and creates dead zones.
                     </div>
-                    <div className="col-xs-6">
+                    <div className="col-xs-12 col-md-3">
                         { poopSvg }
-                    </div>
-                    <div className="col-xs-2">
-                        { poopShockedSvg }
-                    </div>
-                    <div className="col-xs-2">
-                        <img src="images/sweat.svg" />
                     </div>
                 </div>
             </div>

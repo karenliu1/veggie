@@ -3,6 +3,15 @@
 .keyframes(~'poop-blink, 0%, 40%, 60% { ry: 3.604; rx: 3.604; } 50% { ry: 0; rx: 4.2; }');
 .keyframes(~'poop-mouth, from { ry: 0; } to { ry: 6; }');
 
+.section {
+    .display(flex);
+    .flex-direction(column);
+}
+
+.content {
+    .flex(1);
+}
+
 .poopEyePath {
     .animation(poop-blink 3s linear infinite);
 }
