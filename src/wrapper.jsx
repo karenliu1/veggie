@@ -6,6 +6,8 @@ import LandSlide from './land/index.jsx'
 import WasteSlide from './waste/index.jsx'
 import WaterSlide from './water/index.jsx'
 import WeekdaySlide from './weekday/index.jsx'
+import OutroSlide from './outro/index.jsx'
+import CreditsSlide from './credits/index.jsx'
 import styles from './wrapper.less'
 
 export default React.createClass({
@@ -29,6 +31,12 @@ export default React.createClass({
                 </div>
                 <div className={ `${styles.sectionWrapper} ${styles.alternate}` }>
                     <WeekdaySlide />
+                </div>
+                <div className={ styles.sectionWrapper }>
+                    <OutroSlide />
+                </div>
+                <div className={ `${styles.sectionWrapper} ${styles.alternate}` }>
+                    <CreditsSlide />
                 </div>
             </div>
         )
