@@ -5,6 +5,7 @@
 .keyframes(~'wheel, from { transform: rotate(360deg); } to { transform: rotate(0deg); }');
 .keyframes(~'shrink, from { transform: scale(1); } to { transform: scale(0.5); }');
 .keyframes(~'grow, from { transform: scale(0); } to { transform: scale(1); }');
+.keyframes(~'jet-color, 0%, 100% { fill: #ffce31; } 50% { fill: #ffa331; }');
 
 .wheelPath {
     .animation(wheel 1s infinite linear);
@@ -13,6 +14,10 @@
 
 .boatMainPath {
     .animation(small-bounce 1s ease-in-out infinite);
+}
+
+.planeJetPath {
+    .animation(jet-color 1s infinite);
 }
 
 .planeIcon, .carIcon, .boatIcon {

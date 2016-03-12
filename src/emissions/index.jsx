@@ -4,6 +4,7 @@ import styles from './styles.less'
 import wrapperStyles from '../wrapper.less'
 import carSvg from './car_svg.jsx'
 import boatSvg from './boat_svg.jsx'
+import planeSvg from './plane_svg.jsx'
 
 export default React.createClass({
     getInitialState() {
@@ -39,7 +40,7 @@ export default React.createClass({
                 ships <strong>combined</strong>.
 
                 <div className={ transportationClasses }>
-                    <img className={ styles.planeIcon } src="images/plane.svg" />
+                    { planeSvg }
                     { carSvg }
                     { boatSvg }
                 </div>
