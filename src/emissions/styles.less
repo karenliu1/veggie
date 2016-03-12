@@ -16,6 +16,7 @@
 }
 
 .planeIcon, .carIcon, .boatIcon {
+    .flex(1);
     margin-right: 1rem;
     max-width: 15rem;
 }
@@ -25,7 +26,7 @@
 }
 
 .carIcon {
-    .animation(bounce 0.3s linear infinite);
+    .animation(small-bounce 0.3s linear infinite);
 }
 
 .planeIcon {
@@ -34,4 +35,11 @@
 
 .chickenIcon {
     .animation(grow 1s linear forwards);
+}
+
+.transportationContainer {
+    .display(flex);
+    .align-items(flex-end);
+    .justify-content(center);
+    margin-top: 1rem;
 }

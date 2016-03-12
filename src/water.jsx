@@ -14,7 +14,8 @@ export default React.createClass({
                     <img src="images/cow.svg" className={ styles.cow } />
                     It takes <strong>244</strong> gallons of water to produce a
                     pound of tofu, but <strong>2,400</strong> gallons to produce 1
-                    pound of beef. So skimp on the beef, not on the showering!
+                    pound of beef. Smucky encourages you to skimp on the beef,
+                    not on the showering.
                 </div>
             </div>
         )

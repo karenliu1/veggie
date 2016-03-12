@@ -28,7 +28,7 @@ export default React.createClass({
 
         const transportationClasses = classnames(
             this.state.showAnimals && styles.shrinkOut,
-            "row bottom-xs"
+            styles.transportationContainer
         )
 
         return (
@@ -39,15 +39,9 @@ export default React.createClass({
                 ships <strong>combined</strong>.
 
                 <div className={ transportationClasses }>
-                    <div className="col-xs-4">
-                        <img className={ styles.planeIcon } src="images/plane.svg" />
-                    </div>
-                    <div className="col-xs-4">
-                        { carSvg }
-                    </div>
-                    <div className="col-xs-4">
-                        { boatSvg }
-                    </div>
+                    <img className={ styles.planeIcon } src="images/plane.svg" />
+                    { carSvg }
+                    { boatSvg }
                 </div>
 
                 { this.state.showAnimals && animalsEl }

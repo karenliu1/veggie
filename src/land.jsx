@@ -23,7 +23,8 @@ export default React.createClass({
                     </div>
                 </div>
 
-                The land used for animals and animal feed uses 30% of Earth's land mass.
+                The land used for farm animals and animal feed uses 30% of
+                Earth's land mass.
             </div>
         )
     }
