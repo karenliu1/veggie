@@ -55,7 +55,7 @@ export default React.createClass({
 
             fishIconEls.push(
                 <img key={ `fish-${i}` }
-                     src="images/fish.svg"
+                     src="images/fish_pink.svg"
                      className={ classnames(
                          styles.surroundIcon,
                          this.state.showFish && styles.isActive
