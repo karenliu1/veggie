@@ -3,8 +3,6 @@
 .keyframes(~'bounce, from { transform: translateY(5px); } to { transform: translateY(0); }');
 .keyframes(~'small-bounce, from { transform: translateY(2px); } to { transform: translateY(0); }');
 .keyframes(~'wheel, from { transform: rotate(360deg); } to { transform: rotate(0deg); }');
-.keyframes(~'shrink, from { transform: scale(1); } to { transform: scale(0.5); }');
-.keyframes(~'grow, from { transform: scale(0); } to { transform: scale(1); }');
 .keyframes(~'jet-color, from { fill: #ffce31; } to { fill: #ffa331; }');
 
 .wheelPath {
@@ -23,31 +21,10 @@
     .animation(jet-color 0.5s infinite alternate);
 }
 
-.planeIcon, .carIcon, .boatIcon {
-    .flex(1);
-    margin-right: 1rem;
-    text-align: center;
-}
-
-.shrinkOut {
-    .animation(shrink 1s linear forwards);
-}
-
 .carIcon {
     .animation(small-bounce 0.2s linear infinite alternate);
 }
 
 .planeIcon {
     .animation(bounce 1s ease-in-out infinite alternate);
-}
-
-.chickenIcon {
-    .animation(grow 1s linear forwards);
-}
-
-.transportationContainer {
-    .display(flex);
-    .align-items(flex-end);
-    .justify-content(center);
-    margin-top: 1rem;
 }
