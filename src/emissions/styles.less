@@ -10,6 +10,9 @@
 .wheelPath {
     .animation(wheel 1s infinite linear);
     .transform-origin(center center);
+
+    // transform-origin keywords don't work in FF, so disable anim
+    -moz-animation: none;
 }
 
 .boatMainPath {
