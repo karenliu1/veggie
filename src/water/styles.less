@@ -1,12 +1,14 @@
 @import '../lesshat.less';
 
-@waveHeight: 94px; // height of the wave PNG
+@waveHeight: 5rem;
 @waveExcess: 5rem; // how far to overflow on each side for waving effect
 @waveRiseDistance: 60vh; // how far to rise
 
 @waveZindex: 1;
 @cowZindex: 2;
 @textZindex: 3;
+
+@finalWaveColor: #6792AB;
 
 .keyframes(~'waving, 0%, 100% { margin-left: 0; } 50% { margin-left: -@{waveExcess}; }');
 .keyframes(~'waving-reverse, 0%, 100% { margin-left: 0; } 50% { margin-left: @{waveExcess}; }');
@@ -53,9 +55,9 @@
     z-index: @cowZindex;
 }
 
-// Dark blue fill from bottom of slide to start of last wave
+// Fill color from bottom of slide to start of last wave
 .waveBackground {
-    background: #2948CC; // color of the last wave
+    background: @finalWaveColor;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -73,6 +75,7 @@
 
     height: @waveHeight;
     background-repeat: repeat-x;
+    background-size: auto 100%;
     width: calc(~"100% +" @waveExcess * 2);
 }
 
@@ -81,17 +84,17 @@
 }
 
 .wave1 {
-    background-image: url('../../images/wave1.png');
+    background-image: url('../../images/wave1.svg');
     margin-bottom: @waveHeight;
 }
 
 .wave2 {
-    background-image: url('../../images/wave2.png');
+    background-image: url('../../images/wave2.svg');
     left: -@waveExcess;
     margin-bottom: @waveHeight / 2;
 }
 
 .wave3 {
-    background-image: url('../../images/wave3.png');
+    background-image: url('../../images/wave3.svg');
     margin-bottom: 0;
 }
