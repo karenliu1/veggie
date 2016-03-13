@@ -18,7 +18,7 @@
     width: @monkeySize;
 }
 
-.keyframes(~'monkey-gasp, 0%, 100% { right: -@{monkeySize}; } 50% { right: 0; }');
+.keyframes(~'monkey-gasp, from { right: -@{monkeySize}; } to { right: 0; }');
 .monkeyIsActive {
-    .animation(monkey-gasp 2s);
+    .animation(monkey-gasp 1s 2 alternate);
 }

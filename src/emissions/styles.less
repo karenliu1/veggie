@@ -1,11 +1,11 @@
 @import '../lesshat.less';
 
-.keyframes(~'bounce, 0%, 100% { transform: translateY(5px); } 50% { transform: translateY(0); }');
-.keyframes(~'small-bounce, 0%, 100% { transform: translateY(2px); } 50% { transform: translateY(0); }');
+.keyframes(~'bounce, from { transform: translateY(5px); } to { transform: translateY(0); }');
+.keyframes(~'small-bounce, from { transform: translateY(2px); } to { transform: translateY(0); }');
 .keyframes(~'wheel, from { transform: rotate(360deg); } to { transform: rotate(0deg); }');
 .keyframes(~'shrink, from { transform: scale(1); } to { transform: scale(0.5); }');
 .keyframes(~'grow, from { transform: scale(0); } to { transform: scale(1); }');
-.keyframes(~'jet-color, 0%, 100% { fill: #ffce31; } 50% { fill: #ffa331; }');
+.keyframes(~'jet-color, from { fill: #ffce31; } to { fill: #ffa331; }');
 
 .wheelPath {
     .animation(wheel 1s infinite linear);
@@ -16,11 +16,11 @@
 }
 
 .boatMainPath {
-    .animation(small-bounce 1s ease-in-out infinite);
+    .animation(small-bounce 1s ease-in-out infinite alternate);
 }
 
 .planeJetPath {
-    .animation(jet-color 1s infinite);
+    .animation(jet-color 0.5s infinite alternate);
 }
 
 .planeIcon, .carIcon, .boatIcon {
@@ -34,11 +34,11 @@
 }
 
 .carIcon {
-    .animation(small-bounce 0.3s linear infinite);
+    .animation(small-bounce 0.2s linear infinite alternate);
 }
 
 .planeIcon {
-    .animation(bounce 1s ease-in-out infinite);
+    .animation(bounce 1s ease-in-out infinite alternate);
 }
 
 .chickenIcon {
