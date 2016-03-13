@@ -1,9 +1,8 @@
 import React from 'react'
-import classnames from 'classnames'
 import styles from './styles.less'
 
 export default (
-    <svg className={ classnames("icon", styles.carIcon) } viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg className="icon" viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g id="Page-1" stroke="none" fill="none" fill-rule="evenodd">
             <g id="car" transform="translate(0.000000, -1.000000)">
                 <path d="M56.18,16.875 L52.786,15.291 C51.731,14.973 50.679,13.91 50.442,12.928 L48.259,2.858 C48.022,1.875 46.922,0.998 45.809,0.998 L23.851,0.998 C22.736,0.998 21.417,1.96 20.921,2.858 C20.921,2.858 17.647,9.347 16.585,11.217 C16.078,12.11 13.863,13.989 12.826,14.359 C10.71,15.113 6.399,17.785 6.399,17.785 C5.344,18.104 4.168,19.554 3.919,20.533 L4.477,22.464 L2.897,24.254 L1.875,27.975 L58.125,27.975 L58.125,19.603 C58.124,18.593 57.234,17.191 56.18,16.873" id="Shape" fill="#F15744"></path>

@@ -39,9 +39,15 @@ export default React.createClass({
                 ships <strong>combined</strong>.
 
                 <div className={ transportationClasses }>
-                    { planeSvg }
-                    { carSvg }
-                    { boatSvg }
+                    <div className={ styles.planeIcon }>
+                        { planeSvg }
+                    </div>
+                    <div className={ styles.carIcon }>
+                        { carSvg }
+                    </div>
+                    <div className={ styles.boatIcon }>
+                        { boatSvg }
+                    </div>
                 </div>
 
                 { this.state.showAnimals && animalsEl }
