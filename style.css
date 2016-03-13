@@ -6,6 +6,7 @@ body {
 a {
     color: #DDE2A4;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 a:hover {

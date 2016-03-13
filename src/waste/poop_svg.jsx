@@ -4,7 +4,7 @@ import styles from './styles.less'
 
 export default (
     <svg className="icon" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" stroke="none" fill="none" fill-rule="evenodd">
             <g id="poop">
                 <path d="M30.206,34.887 C13.146,34.887 0,27.789 0,43.728 C0,56.456 16.892,60 29.789,60 C44.773,60 60,56.456 60,43.728 C60,27.789 47.839,34.887 30.206,34.887 L30.206,34.887 Z" id="Shape" fill="#89664C"></path>
                 <path d="M29.729,18.879 C20.176,18.879 5.227,19.995 5.227,31.5 C5.227,48.326 54.772,48.326 54.772,31.5 C54.772,19.995 39.884,18.879 29.732,18.879" id="Shape" fill="#9B7861"></path>
