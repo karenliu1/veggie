@@ -8,7 +8,7 @@ export default React.createClass({
             <div className={ wrapperStyles.section }>
                 <div className="row middle-xs">
                     <div className="col-xs-12 col-sm-3">
-                        <img src="images/rainbow.svg" />
+                        <img className="icon" src="images/rainbow.svg" />
                     </div>
                     <div className="col-xs-12 col-sm-9">
                         Being a veggie-tarian is great for more than just the
@@ -25,7 +25,7 @@ export default React.createClass({
                         going to go snack on some berries now.
                     </div>
                     <div className="col-xs-12 col-sm-3">
-                        <img src="images/bear.svg" />
+                        <img className="icon" src="images/bear.svg" />
                     </div>
                 </div>
             </div>

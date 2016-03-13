@@ -32,7 +32,7 @@ export default React.createClass({
                 <img className={ monkeyStyles } src="images/monkey.svg" />
                 <div className={ classnames(styles.intro, "row center-xs middle-xs") }>
                     <div className="col-xs-12 col-sm-3">
-                        <img src="images/bear.svg" className={ styles.bear } />
+                        <img src="images/bear.svg" className="icon" />
                     </div>
                     <div className={ classnames(styles.text, "col-xs-12 col-sm-9") }>
                         This is Smucky the Bear. Smucky is not here to tell you how

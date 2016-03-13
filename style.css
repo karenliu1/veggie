@@ -11,3 +11,7 @@ a {
 a:hover {
     color: #668063;
 }
+
+.icon {
+    max-width: 15rem;
+}

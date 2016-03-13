@@ -1,8 +1,9 @@
 import React from 'react'
+import classnames from 'classnames'
 import styles from './styles.less'
 
 export default (
-    <svg className={ styles.boatIcon } viewBox="0 0 64 65" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg className={ classnames("icon", styles.boatIcon) } viewBox="0 0 64 65" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="boat">
                 <g className={ styles.boatMainPath } id="boat_body">

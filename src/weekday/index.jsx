@@ -24,12 +24,12 @@ export default React.createClass({
                         <div className={ styles.faceIconContainer }>
                             { this.state.isRelieved ? (
                                 <img src="images/relieved.svg"
-                                     className={ styles.relievedIcon } />
+                                     className={ classnames("icon", styles.relievedIcon) } />
                             ) : crySvg }
                         </div>
                     </div>
                     <div className="col-xs-6">
-                        <img src="images/burger.svg" className={ styles.burgerIcon } />
+                        <img src="images/burger.svg" className="icon" />
                     </div>
                 </div>
                 <div className={ styles.textContainer }>
