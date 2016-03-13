@@ -9,32 +9,20 @@
 @fgColor2: #594433;
 @separatorColor: #F4F4F4;
 
-@separatorSize: 3rem;
+@smallWidth: 420px;
 @wrapperPadding: 3rem;
+@smallWrapperPadding: 1rem;
+@bigSeparatorSize: 3rem;
+@smallSeparatorSize: 1rem;
 
-.sectionWrapper {
-    background: @bgColor1;
-    position: relative;
-
-    padding: (@wrapperPadding + @separatorSize / 2) @wrapperPadding @wrapperPadding;
-
-    // No divider before the first element
-    &:first-of-type {
-        padding-top: @wrapperPadding;
-
-        &::after {
-            content: none;
-        }
-    }
-
-    // Separator from:
-    // http://tympanus.net/Development/SectionSeparators/
+// http://tympanus.net/Development/SectionSeparators/
+.triangleSeparators(@separatorSize, @bgColor) {
     &::after {
-        background: @bgColor2;
+        background: @bgColor;
         content: "";
         pointer-events: none;
-        .box-shadow(-@separatorSize @separatorSize 0 @bgColor2,
-                    @separatorSize -@separatorSize 0 @bgColor2);
+        .box-shadow(-@separatorSize @separatorSize 0 @bgColor,
+                    @separatorSize -@separatorSize 0 @bgColor);
         .transform(translateX(-50%) rotate(45deg));
 
         position: absolute;
@@ -45,17 +33,48 @@
     }
 }
 
+.sectionWrapper {
+    background: @bgColor1;
+    position: relative;
+
+    padding: (@wrapperPadding + @bigSeparatorSize / 2) @wrapperPadding @wrapperPadding;
+    .triangleSeparators(@bigSeparatorSize, @bgColor2);
+    @media screen and (max-width: @smallWidth) {
+        padding: (@smallWrapperPadding + @smallSeparatorSize / 2)
+                 @smallWrapperPadding @smallWrapperPadding;
+        .triangleSeparators(@smallSeparatorSize, @bgColor2);
+    }
+
+    // No divider before the first element
+    &:first-of-type {
+        padding-top: @wrapperPadding;
+        @media screen and (max-width: @smallWidth) {
+            padding-top: @smallWrapperPadding;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
 .section {
     background: @fgColor1;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    min-height: calc(~"100vh -" (2 * @wrapperPadding));
     overflow: hidden;
     padding: 2rem;
     position: relative;
     text-shadow: 1px 1px #535358;
     .box-sizing(border-box);
+
+    font-size: 2rem;
+    min-height: calc(~"100vh -" (2 * @wrapperPadding));
+    @media screen and (max-width: @smallWidth) {
+        font-size: 1.5rem;
+        min-height: calc(~"100vh -" (2 * @smallWrapperPadding));
+        padding-top: @smallWrapperPadding;
+    }
 
     // For vertical centering of content
     .display(flex);
@@ -70,10 +89,9 @@
 .sectionWrapper.alternate {
     background: @bgColor2;
 
-    &::after {
-        background: @bgColor1;
-        .box-shadow(-@separatorSize @separatorSize 0 @bgColor1,
-                    @separatorSize -@separatorSize 0 @bgColor1);
+    .triangleSeparators(@bigSeparatorSize, @bgColor1);
+    @media screen and (max-width: @smallWidth) {
+        .triangleSeparators(@smallSeparatorSize, @bgColor1);
     }
 }
 
