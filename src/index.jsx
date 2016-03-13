@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Wrapper from './wrapper.jsx'
+import Main from './main.jsx'
 
 ReactDOM.render(
-    <Wrapper />,
+    <Main />,
     document.getElementById('veggieTarget')
 )

@@ -1,12 +1,11 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './styles.less'
-import wrapperStyles from '../wrapper.less'
 
 export default React.createClass({
     render() {
         return (
-            <div className={ classnames(wrapperStyles.section, styles.waterSection) }>
+            <div className={ styles.section }>
                 <div className="wow">
                     <div className={ styles.wave1 }></div>
                     <div className={ styles.wave2 }></div>

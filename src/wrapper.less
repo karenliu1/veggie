@@ -45,9 +45,20 @@
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
     min-height: calc(~"100vh -" (2 * @wrapperPadding));
+    overflow: hidden;
     padding: 2rem;
+    position: relative;
     text-shadow: 1px 1px #535358;
     .box-sizing(border-box);
+
+    // For vertical centering of content
+    .display(flex);
+    .flex-direction(column);
+    .justify-content(center);
+}
+
+.section.noPadding {
+    padding: 0;
 }
 
 .sectionWrapper.alternate {

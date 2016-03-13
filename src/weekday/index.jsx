@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './styles.less'
-import wrapperStyles from '../wrapper.less'
 import crySvg from './cry_svg.jsx'
 
 export default React.createClass({
@@ -18,7 +17,7 @@ export default React.createClass({
 
     render() {
         return (
-            <div className={ wrapperStyles.section }>
+            <div>
                 <div className="row">
                     <div className="col-xs-6">
                         <div className={ styles.faceIconContainer }>

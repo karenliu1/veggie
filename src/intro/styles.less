@@ -1,16 +1,9 @@
 @import '../lesshat.less';
 
 .section {
-    .display(flex);
-    .flex-direction(column);
-
     // For displaying the monkey
     overflow: hidden;
     position: relative;
-}
-
-.intro {
-    .flex(1);
 }
 
 @monkeySize: 8rem;
@@ -30,6 +23,6 @@
     .animation(monkey-gasp 2s);
 }
 
-.text {
+.textContainer {
     text-align: left;
 }

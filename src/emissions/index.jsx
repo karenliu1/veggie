@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './styles.less'
-import wrapperStyles from '../wrapper.less'
 import carSvg from './car_svg.jsx'
 import boatSvg from './boat_svg.jsx'
 import planeSvg from './plane_svg.jsx'
@@ -33,7 +32,7 @@ export default React.createClass({
         )
 
         return (
-            <div className={ wrapperStyles.section }>
+            <div>
                 The greenhouse gas emissions produced by animal farming <a
                     href="#" onClick={ this.showAnimals }>are more than the
                     emissions</a> from all cars, trucks, planes and

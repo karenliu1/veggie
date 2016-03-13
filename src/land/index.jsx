@@ -1,6 +1,5 @@
 import React from 'react'
 import classnames from 'classnames'
-import wrapperStyles from '../wrapper.less'
 import styles from './styles.less'
 
 const NUM_GRAIN = 16
@@ -66,7 +65,7 @@ export default React.createClass({
         }
 
         return (
-            <div className={ wrapperStyles.section }>
+            <div>
                 It takes up to { NUM_GRAIN } pounds of grain to produce 1 pound
                 of meat, and { NUM_FISH } pounds of wild-caught fish to produce
                 1 pound of farmed fish.

@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './styles.less'
-import wrapperStyles from '../wrapper.less'
 
 export default React.createClass({
     hideMonkeyTimeout: null, // after 3s, remove the monkeyIsActive class
@@ -28,13 +27,16 @@ export default React.createClass({
             this.state.showMonkey && styles.monkeyIsActive
         )
         return (
-            <div className={ classnames(wrapperStyles.section, styles.section, 'wow') }>
+            <div>
                 <img className={ monkeyStyles } src="images/monkey.svg" />
-                <div className={ classnames(styles.intro, "row center-xs middle-xs") }>
+                <div className="row center-xs middle-xs">
                     <div className="col-xs-12 col-sm-3">
                         <img src="images/bear.svg" className="icon" />
                     </div>
-                    <div className={ classnames(styles.text, "col-xs-12 col-sm-9") }>
+                    <div className={ classnames(
+                        styles.textContainer,
+                        "col-xs-12 col-sm-9"
+                    ) }>
                         This is Smucky the Bear. Smucky is not here to tell you how
                         to prevent forest fires. He <a href="#" onClick={ this.showMonkey }>
                             doesn't even care if you don't love animals
