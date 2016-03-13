@@ -13,7 +13,9 @@ export default React.createClass({
                     waterways and creates dead zones.
                 </div>
                 <div className="col-xs-12 col-md-3">
-                    { poopSvg }
+                    <div className={ classnames("wow", styles.poopIcon) }>
+                        { poopSvg }
+                    </div>
                 </div>
             </div>
         )
