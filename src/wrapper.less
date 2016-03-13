@@ -16,20 +16,25 @@
     background: @bgColor1;
     position: relative;
 
-    padding: @wrapperPadding @wrapperPadding (@wrapperPadding + @separatorSize / 2);
+    padding: (@wrapperPadding + @separatorSize / 2) @wrapperPadding @wrapperPadding;
 
-    &:last-of-type {
-        padding-bottom: @wrapperPadding;
+    // No divider before the first element
+    &:first-of-type {
+        padding-top: @wrapperPadding;
+
+        &::after {
+            content: none;
+        }
     }
 
     // Separator from:
     // http://tympanus.net/Development/SectionSeparators/
     &::after {
-        background: inherit;
+        background: @bgColor2;
         content: "";
         pointer-events: none;
-        .box-shadow(-@separatorSize @separatorSize 0 @bgColor1,
-                    @separatorSize -@separatorSize 0 @bgColor1);
+        .box-shadow(-@separatorSize @separatorSize 0 @bgColor2,
+                    @separatorSize -@separatorSize 0 @bgColor2);
         .transform(translateX(-50%) rotate(45deg));
 
         position: absolute;
@@ -66,8 +71,9 @@
     background: @bgColor2;
 
     &::after {
-        .box-shadow(-@separatorSize @separatorSize 0 @bgColor2,
-                    @separatorSize -@separatorSize 0 @bgColor2);
+        background: @bgColor1;
+        .box-shadow(-@separatorSize @separatorSize 0 @bgColor1,
+                    @separatorSize -@separatorSize 0 @bgColor1);
     }
 }
 
