@@ -8,8 +8,8 @@ export default React.createClass({
     render() {
         return (
             <div>
-                <div className="row middle-xs">
-                    <div className="col-xs-12 col-sm-9">
+                <div className="row middle-xs center-xs">
+                    <div className="col-xs-12 col-sm-9 text-container">
                         Images sourced and edited from the beautiful gallery at <a
                             href={ EMOJI_URL }>EmojiOne</a>
                     </div>
@@ -19,13 +19,13 @@ export default React.createClass({
                         </a>
                     </div>
                 </div>
-                <div className="row middle-xs">
+                <div className="row middle-xs center-xs">
                     <div className="col-xs-12 col-sm-3">
                         <a href={ FACT_URL }>
                             <img className="icon" src="images/plant.svg" />
                         </a>
                     </div>
-                    <div className="col-xs-12 col-sm-9">
+                    <div className="col-xs-12 col-sm-9 text-container">
                         Factoids nabbed from <a
                             href={ FACT_URL }>One Green Planet</a>
                     </div>

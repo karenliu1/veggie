@@ -7,7 +7,7 @@ export default React.createClass({
     render() {
         return (
             <div className="row middle-xs center-xs">
-                <div className={ classnames(styles.textContainer, "col-xs-12 col-md-9") }>
+                <div className="text-container col-xs-12 col-md-9">
                     Farm animals produce ~130 times the amount of
                     excrement as the entire human population. Runoff pollutes
                     waterways and creates dead zones.

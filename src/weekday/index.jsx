@@ -31,21 +31,19 @@ export default React.createClass({
                         <img src="images/burger.svg" className="icon" />
                     </div>
                 </div>
-                <div className={ styles.textContainer }>
-                    <p>
-                        "So does this mean I have to give up burgers forever??"
-                    </p>
-                    <p>
-                        <a href="#" onClick={ this.changeFace }>Not necessarily</a>.
-                    </p>
-                    <p>
-                        Graham Hill has a <a
-                            href="https://www.ted.com/talks/graham_hill_weekday_vegetarian"
-                            target="_blank">wonderful TED talk</a> about
-                        making an incremental change. Cutting back partway
-                        still makes a difference.
-                    </p>
-                </div>
+                <p>
+                    "So does this mean I have to give up burgers forever??"
+                </p>
+                <p>
+                    <a href="#" onClick={ this.changeFace }>Not necessarily</a>.
+                </p>
+                <p>
+                    Graham Hill has a <a
+                        href="https://www.ted.com/talks/graham_hill_weekday_vegetarian"
+                        target="_blank">wonderful TED talk</a> about
+                    making an incremental change. Cutting back partway
+                    still makes a difference.
+                </p>
             </div>
         )
     }

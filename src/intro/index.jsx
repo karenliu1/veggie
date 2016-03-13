@@ -33,10 +33,7 @@ export default React.createClass({
                     <div className="col-xs-12 col-sm-3">
                         <img src="images/bear.svg" className="icon" />
                     </div>
-                    <div className={ classnames(
-                        styles.textContainer,
-                        "col-xs-12 col-sm-9"
-                    ) }>
+                    <div className="text-container col-xs-12 col-sm-9">
                         This is Smucky the Bear. Smucky is not here to tell you how
                         to prevent forest fires. He <a href="#" onClick={ this.showMonkey }>
                             doesn't even care if you don't love animals

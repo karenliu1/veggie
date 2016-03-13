@@ -15,3 +15,7 @@ a:hover {
 .icon {
     max-width: 15rem;
 }
+
+.text-container {
+    text-align: left;
+}
