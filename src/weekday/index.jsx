@@ -24,7 +24,7 @@ export default React.createClass({
                     Not necessarily. Graham Hill has a <a
                         href="https://www.ted.com/talks/graham_hill_weekday_vegetarian"
                         target="_blank">wonderful TED talk</a> about
-                    making an incremental change. Cutting back partway
+                    making an incremental change. Altering some of your diet
                     still makes a difference.
                 </p>
             </div>
