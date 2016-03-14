@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import rainbowSvg from './rainbow_svg.jsx'
 
 export default React.createClass({
     render() {
@@ -7,7 +8,7 @@ export default React.createClass({
             <div>
                 <div className="row middle-xs center-xs">
                     <div className="col-xs-12 col-sm-3">
-                        <img className="icon" src="images/rainbow.svg" />
+                        { rainbowSvg }
                     </div>
                     <div className="text-container col-xs-12 col-sm-9">
                         Being a veggie-tarian is great for more than just the

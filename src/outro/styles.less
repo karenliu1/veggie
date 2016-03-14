@@ -1,0 +1,18 @@
+@import '../lesshat.less';
+
+@red: #f66;
+@yellow: #fffb80;
+@green: #a3e66f;
+@blue: #66c2ff;
+@purple: #9180ff;
+
+.keyframes(~'redFill, from { fill: @{red}; } to { fill: @{green}; }');
+.redPath { .animation(redFill 2s infinite alternate); }
+.keyframes(~'yellowFill, from { fill: @{yellow}; } to { fill: @{blue}; }');
+.yellowPath { .animation(yellowFill 2s infinite alternate); }
+.keyframes(~'greenFill, from { fill: @{green}; } to { fill: @{purple}; }');
+.greenPath { .animation(greenFill 2s infinite alternate); }
+.keyframes(~'blueFill, from { fill: @{blue}; } to { fill: @{red}; }');
+.bluePath { .animation(blueFill 2s infinite alternate); }
+.keyframes(~'purpleFill, from { fill: @{purple}; } to { fill: @{yellow}; }');
+.purplePath { .animation(purpleFill 2s infinite alternate); }

@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import crocSvg from './croc_svg.jsx'
 
 const FACT_URL = "http://www.onegreenplanet.org/animalsandnature/facts-on-animal-farming-and-the-environment/"
 const EMOJI_URL = "http://emojione.com/"
@@ -15,7 +16,7 @@ export default React.createClass({
                     </div>
                     <div className="col-xs-12 col-sm-3">
                         <a href={ EMOJI_URL }>
-                            <img className="icon" src="images/croc.svg" />
+                            { crocSvg }
                         </a>
                     </div>
                 </div>

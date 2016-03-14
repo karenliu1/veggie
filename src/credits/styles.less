@@ -1,0 +1,9 @@
+@import '../lesshat.less';
+
+.keyframes(~'leg-swing, from { transform: rotate(1deg); } to { transform: rotate(-1deg); }');
+.leftLegPath {
+    .animation(leg-swing 1s linear infinite alternate);
+}
+.rightLegPath {
+    .animation(leg-swing 1s linear 1s infinite alternate);
+}
