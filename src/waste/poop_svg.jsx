@@ -13,7 +13,7 @@ export default (
                 <ellipse className={ styles.poopEyePath } id="Oval" fill="#000000" cx="17.604" cy="30.604" rx="3.603" ry="3.604"></ellipse>
                 <path d="M47.562,32.32 C47.562,36.3 44.333,39.525 40.358,39.525 C36.378,39.525 33.155,36.3 33.155,32.32 C33.155,28.346 36.378,25.118 40.358,25.118 C44.333,25.118 47.562,28.347 47.562,32.32" id="Shape" fill="#FFFFFF"></path>
                 <ellipse className={ styles.poopEyePath } id="Oval" fill="#000000" cx="38.37" cy="31.32" rx="3.603" ry="3.603"></ellipse>
-                <ellipse className={ classnames(styles.poopMouthPath, "wow") } fill="#000000" cx="30" cy="47.63" rx="6" ry="6"></ellipse>
+                <ellipse className={ styles.poopMouthPath } fill="#000000" cx="30" cy="47.63" rx="6" ry="6"></ellipse>
             </g>
         </g>
     </svg>
