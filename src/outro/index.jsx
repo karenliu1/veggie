@@ -11,11 +11,11 @@ export default React.createClass({
                         { rainbowSvg }
                     </div>
                     <div className="text-container col-xs-12 col-sm-9">
-                        Being a veggie-tarian is great for more than just the
-                        environment &mdash; a plant-based diet is great for
-                        health, is easy on the purse, reduces the number of
-                        animals raised in cruelty and confinement, and has the
-                        potential to ease world hunger.
+                        Switching to a plant-based diet is good for more than
+                        just the environment &mdash; it's great for health, is
+                        easy on the purse, reduces the number of animals raised
+                        in cruelty and confinement, and has the potential to
+                        ease world hunger.
                     </div>
                 </div>
 
