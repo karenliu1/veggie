@@ -1,7 +1,5 @@
 @import '../lesshat.less';
 
-.keyframes(~'poop-blink, 0%, 40%, 60% { ry: 3.604; rx: 3.604; } 50% { ry: 0; rx: 4.2; }');
-
 // Cubic-bezier from http://learnsome.co/blog/bouncy/
 @bouncyBezier: cubic-bezier(.87,-.41,.19,1.44);
 
@@ -20,10 +18,6 @@
     opacity: 0;
     transform: translateY(-4rem) scale(0.8, 1.3);
     .transition(opacity 1s, transform 1s @bouncyBezier);
-}
-
-.poopEyePath {
-    .animation(poop-blink 3s linear infinite);
 }
 
 .poopMouthPath {
