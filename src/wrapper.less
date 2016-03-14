@@ -56,6 +56,13 @@
             content: none;
         }
     }
+
+    // UGH IE SO TERRIBLE
+    // Vertical alignment fix from
+    // http://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie/33222765#33222765
+    .display(flex);
+    .flex-direction(column);
+    height: 100%;
 }
 
 .section {
@@ -68,10 +75,10 @@
     .box-sizing(border-box);
 
     font-size: 2rem;
-    min-height: calc(~"100vh -" (2 * @wrapperPadding));
+    min-height: calc(~"100vh - " (2 * @wrapperPadding));
     @media screen and (max-width: @smallWidth) {
         font-size: 1.5rem;
-        min-height: calc(~"100vh -" (2 * @smallWrapperPadding));
+        min-height: calc(~"100vh - " (2 * @smallWrapperPadding));
         padding-top: @smallWrapperPadding;
     }
 
