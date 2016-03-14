@@ -11,10 +11,7 @@
 @finalWaveColor: #6792AB;
 
 .keyframes(~'waving, from { margin-left: 0; } to { margin-left: -@{waveExcess}; }');
-.keyframes(~'rising, from { bottom: 0; } to { bottom: @{waveRiseDistance}; }');
-.keyframes(~'rising-background, from { height: 0; } to { height: @{waveRiseDistance}; }');
 .keyframes(~'cow-wave, from { transform: rotate(-3deg); } to { transform: rotate(3deg); }');
-.keyframes(~'cow-opacity, from { opacity: 0; } to { opacity: 1; }');
 
 .section {
     padding: 2rem;
@@ -28,23 +25,25 @@
 
 :global(.wow.animated) {
     .waveBackground {
-        .animation(rising-background 4s forwards);
+        height: @waveRiseDistance;
+    }
+
+    .wave1, .wave2, .wave3 {
+        bottom: @waveRiseDistance;
     }
 
     .wave1, .wave3 {
-        .animation(waving 1s infinite ease-in-out alternate,
-                   rising 4s forwards);
+        .animation(waving 1s infinite ease-in-out alternate);
     }
 
     .wave2 {
-        .animation(waving 1s infinite ease-in-out alternate-reverse,
-                   rising 4s forwards);
+        .animation(waving 1s infinite ease-in-out alternate-reverse);
     }
 
     .cow {
-        .animation(rising 4s 1s both,
-                   cow-opacity 4s 1s both,
-                   cow-wave 1s infinite ease-in-out alternate);
+        .animation(cow-wave 1s infinite ease-in-out alternate);
+        bottom: @waveRiseDistance;
+        opacity: 1;
     }
 }
 
@@ -54,6 +53,10 @@
     margin-bottom: -@waveRiseDistance / 2;
     position: absolute;
     z-index: @cowZindex;
+
+    bottom: 0;
+    opacity: 0;
+    .transition(bottom 4s 1s, opacity 4s 1s); // note the 1s delay
 }
 
 // Fill color from bottom of slide to start of last wave
@@ -63,11 +66,18 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding-top: 1px; // weird...needs a 1px correction
+
+    height: 0;
+    .transition(height 4s);
 }
 
 .textContainer {
     z-index: @textZindex;
+}
+
+.wave1, .wave2, .wave3 {
+    bottom: 0;
+    .transition(bottom 4s);
 }
 
 .wave1, .wave2, .wave3 {

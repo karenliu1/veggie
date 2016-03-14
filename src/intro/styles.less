@@ -1,24 +1,16 @@
 @import '../lesshat.less';
 
-.section {
-    // For displaying the monkey
-    overflow: hidden;
-    position: relative;
-}
-
 @monkeySize: 8rem;
 
 .monkey {
     .rotate(270deg);
     position: absolute;
-    right: -@monkeySize;
     top: 50%;
-    .transition(right 1s ease-out);
-
     width: @monkeySize;
-}
 
-.keyframes(~'monkey-gasp, from { right: -@{monkeySize}; } to { right: 0; }');
-.monkeyIsActive {
-    .animation(monkey-gasp 1s 2 alternate);
+    right: -@monkeySize;
+    .transition(right 1s ease-out);
+    &.monkeyIsActive {
+        right: 0;
+    }
 }

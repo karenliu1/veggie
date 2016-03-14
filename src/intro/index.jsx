@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import styles from './styles.less'
 
 export default React.createClass({
-    hideMonkeyTimeout: null, // after 3s, remove the monkeyIsActive class
+    hideMonkeyTimeout: null,
 
     getInitialState() {
         return { showMonkey: false }
@@ -15,7 +15,7 @@ export default React.createClass({
             this.hideMonkeyTimeout = setTimeout(() => {
                 this.hideMonkeyTimeout = null
                 this.setState({ showMonkey: false })
-            }, 2000)
+            }, 1000)
             this.setState({ showMonkey: true })
         }
         e.preventDefault()
