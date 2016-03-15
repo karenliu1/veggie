@@ -10,7 +10,9 @@
 
 @finalWaveColor: #6792AB;
 
-.keyframes(~'waving, from { margin-left: 0; } to { margin-left: -@{waveExcess}; }');
+@waveEdgeCorrection: 1px; // 1px correction for small screens :(
+
+.keyframes(~'waving, from { margin-left: -@{waveEdgeCorrection}; } to { margin-left: -@{waveExcess}; }');
 .keyframes(~'cow-wave, from { transform: rotate(-3deg); } to { transform: rotate(3deg); }');
 
 .section {
@@ -25,7 +27,7 @@
 
 :global(.wow.animated) {
     .waveBackground {
-        height: @waveRiseDistance;
+        height: @waveRiseDistance + @waveEdgeCorrection;
     }
 
     .wave1, .wave2, .wave3 {
