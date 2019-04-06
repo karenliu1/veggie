@@ -5,12 +5,16 @@
 .keyframes(~'wheel, from { transform: rotate(360deg); } to { transform: rotate(0deg); }');
 .keyframes(~'jet-color, from { fill: #ffce31; } to { fill: #ffa331; }');
 
-.wheelPath {
+.wheelPath1, .wheelPath2 {
     .animation(wheel 1s infinite linear);
-    .transform-origin(center center);
+}
 
-    // transform-origin keywords don't work in FF, so disable anim
-    -moz-animation: none;
+.wheelPath1 {
+    .transform-origin(9.06px 8.628px);
+}
+
+.wheelPath2 {
+    .transform-origin(8.938px 8.628px);
 }
 
 .boatMainPath {

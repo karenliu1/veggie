@@ -14,7 +14,7 @@ export default (
                 <path d="M2.897,24.26 L5.731,24.26 C6.182,24.26 6.686,23.841 6.85,23.329 L7.448,21.469 C7.612,20.957 7.377,20.539 6.925,20.539 L3.915,20.539 L2.893,24.26" id="Shape" fill="#FFFFFF"></path>
                 <path d="M58.13,20.535 L55.821,20.535 C55.453,20.535 55.043,20.953 54.909,21.465 C54.909,21.465 54.543,22.861 54.422,23.325 C54.288,23.837 54.481,24.256 54.849,24.256 L58.13,24.256 L58.13,20.535" id="Shape" fill="#FFE62E"></path>
                 <g transform="translate(5.000000, 24.000000)">
-                    <g className={ styles.wheelPath }>
+                    <g className={ styles.wheelPath1 }>
                         <ellipse id="Oval" fill="#3E4347" cx="9.06" cy="8.628" rx="8.438" ry="8.372"></ellipse>
                         <path d="M13.884,8.628 C13.884,11.27 11.725,13.413 9.063,13.413 C6.4,13.413 4.241,11.269 4.241,8.628 C4.241,5.988 6.4,3.844 9.063,3.844 C11.725,3.844 13.884,5.988 13.884,8.628" id="Shape" fill="#E8E8E8"></path>
                         <g id="Group" transform="translate(5.000000, 5.000000)" fill="#3E4347">
@@ -31,7 +31,7 @@ export default (
                     </g>
                 </g>
                 <g transform="translate(37.000000, 24.000000)">
-                    <g className={ styles.wheelPath }>
+                    <g className={ styles.wheelPath2 }>
                         <ellipse id="Oval" fill="#3E4347" cx="8.938" cy="8.628" rx="8.438" ry="8.372"></ellipse>
                         <path d="M13.759,8.628 C13.759,11.27 11.6,13.413 8.938,13.413 C6.276,13.413 4.117,11.269 4.117,8.628 C4.117,5.988 6.276,3.844 8.938,3.844 C11.6,3.844 13.759,5.988 13.759,8.628" id="Shape" fill="#E8E8E8"></path>
                         <g id="Group" transform="translate(5.000000, 5.000000)" fill="#3E4347">
